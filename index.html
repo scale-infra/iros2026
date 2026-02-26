@@ -68,19 +68,19 @@
     /* --- 新增：深色横幅背景设计 --- */
     .hero-dark {
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
-      padding: 3rem 0; /* 增加上下留白，显得更大气 */
+      padding: 3rem 0;
     }
 
     .hero-dark .hero-title {
       color: #ffffff !important;
       font-weight: 800 !important;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 增加文字阴影，使其更立体 */
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     .hero-dark .publication-authors span {
-      color: #93c5fd !important; /* 浅蓝灰色，与深蓝背景相得益彰 */
+      color: #93c5fd !important;
       font-weight: 600;
-      letter-spacing: 1px; /* 字间距稍微拉开一点更高级 */
+      letter-spacing: 1px;
     }
     /* ----------------------------- */
 
@@ -118,15 +118,24 @@
       color: #2b6cb0 !important;
     }
     
-    /* 增加列表样式间距优化 */
-    .content ul {
-      margin-top: 0.5em;
+    /* === 专门针对 Topic 板块缩小行间距 === */
+    #topic .content p {
+      margin-bottom: 1rem;
     }
-    .content h4.title {
+    #topic .content h4.title {
       color: #2d3748;
       border-left: 4px solid #3182ce;
       padding-left: 10px;
-      margin-top: 1.5rem;
+      margin-top: 1.2rem; /* 减小上边距 */
+      margin-bottom: 0.5rem; /* 减小下边距 */
+    }
+    #topic .content ul {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+    }
+    #topic .content li {
+      line-height: 1.4; /* 缩小行高 */
+      margin-bottom: 0.2rem; /* 缩小列表项之间的间距 */
     }
   </style>
 </head>
@@ -203,42 +212,42 @@
         </div>
         <div class="content has-text-left">
           <p>
-            To ensure technical depth and structured dialogue, the workshop is organized around four interconnected pillars[cite: 41]:
+            To ensure technical depth and structured dialogue, the workshop is organized around four interconnected pillars:
           </p>
           
-          <h4 class="title is-5">1. Data Scaling [cite: 42]</h4>
+          <h4 class="title is-5">1. Data Scaling</h4>
           <ul>
-            <li>Scaling real-world robot interaction data collection [cite: 43]</li>
-            <li>Simulation data generation and orchestration [cite: 44]</li>
-            <li>Human-in-the-loop demonstrations and teleoperation [cite: 45]</li>
-            <li>Synthetic multimodal data pipelines [cite: 46]</li>
-            <li>Sim–real hybrid dataset construction [cite: 47]</li>
+            <li>Scaling real-world robot interaction data collection</li>
+            <li>Simulation data generation and orchestration</li>
+            <li>Human-in-the-loop demonstrations and teleoperation</li>
+            <li>Synthetic multimodal data pipelines</li>
+            <li>Sim–real hybrid dataset construction</li>
           </ul>
 
-          <h4 class="title is-5">2. Training [cite: 48]</h4>
+          <h4 class="title is-5">2. Training</h4>
           <ul>
-            <li>Supervised fine-tuning and imitation learning [cite: 49]</li>
-            <li>Offline and online reinforcement learning [cite: 50]</li>
-            <li>Preference learning and feedback modeling [cite: 51]</li>
-            <li>Continuous post-training workflows [cite: 52]</li>
-            <li>Distributed experimentation and rollout systems [cite: 53]</li>
+            <li>Supervised fine-tuning and imitation learning</li>
+            <li>Offline and online reinforcement learning</li>
+            <li>Preference learning and feedback modeling</li>
+            <li>Continuous post-training workflows</li>
+            <li>Distributed experimentation and rollout systems</li>
           </ul>
 
-          <h4 class="title is-5">3. Evaluation [cite: 54]</h4>
+          <h4 class="title is-5">3. Evaluation</h4>
           <ul>
-            <li>Benchmarking VLA capabilities and generalization [cite: 55]</li>
-            <li>Algorithm comparison protocols [cite: 56]</li>
-            <li>Real-robot evaluation methodologies [cite: 57]</li>
-            <li>Safety and robustness assessment [cite: 58]</li>
-            <li>Long-horizon and open-world task evaluation [cite: 59]</li>
+            <li>Benchmarking VLA capabilities and generalization</li>
+            <li>Algorithm comparison protocols</li>
+            <li>Real-robot evaluation methodologies</li>
+            <li>Safety and robustness assessment</li>
+            <li>Long-horizon and open-world task evaluation</li>
           </ul>
 
-          <h4 class="title is-5">4. Deployment Infrastructure [cite: 60]</h4>
+          <h4 class="title is-5">4. Deployment Infrastructure</h4>
           <ul>
-            <li>Real-robot execution systems [cite: 61]</li>
-            <li>Safety monitoring and runtime diagnostics [cite: 62]</li>
-            <li>Hardware–software integration pipelines [cite: 63]</li>
-            <li>Continuous deployment and data feedback loops [cite: 64]</li>
+            <li>Real-robot execution systems</li>
+            <li>Safety monitoring and runtime diagnostics</li>
+            <li>Hardware–software integration pipelines</li>
+            <li>Continuous deployment and data feedback loops</li>
           </ul>
 
         </div>
