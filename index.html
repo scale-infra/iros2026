@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Building Scalable Infrastructure for Vision-Language-Action Robot Learning: From Data Scaling to Real-World Deployment">
+  <meta name="keywords" content="IROS 2026, VLA, Robot Learning, Workshop">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Building Scalable Infrastructure for Vision-Language-Action Robot Learning: From Data Scaling to Real-World Deployment</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+  <style>
+    /* Helper class to center figures since we cannot modify external CSS */
+    .is-centered-figure {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-2 publication-title">Building Scalable Infrastructure for Vision–Language–Action Robot Learning:<br>From Data Scaling to Real-World Deployment</h1>
+          <div class="is-size-4 publication-authors">
+            <span class="author-block">IROS 2026 Workshop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Recent advances in Vision-Language-Action (VLA) models and embodied foundation models have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
+          </p>
+          <p>
+            This workshop focuses on building the end-to-end infrastructure required for scalable robot learning, covering the full lifecycle from data scaling to deployment. The program combines invited keynote talks, spotlight presentations, interactive posters, and a panel discussion to examine four tightly connected stages of VLA development: data scaling, training, evaluation, and deployment infrastructure.
+          </p>
+          <p>
+            Discussions will address large-scale real and simulated data generation, post-training paradigms such as supervised fine-tuning and reinforcement learning, standardized evaluation protocols for embodied intelligence, and infrastructure supporting real-world robot execution and fleet learning. This multi-format structure is designed to connect algorithmic innovation with engineering practice and to encourage cross-disciplinary exchange between robotics, machine learning systems, and computer vision communities.
+          </p>
+          <p>
+            We expect the workshop to (i) clarify shared system challenges in scaling VLA post-training, (ii) promote reproducible evaluation and deployment practices, and (iii) catalyze reusable infrastructure design principles that enable continuous robot learning in real-world environments.
+          </p>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Organizers</h2>
+        <div class="columns is-multiline is-centered">
+          
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/yuchao.jpg" alt="Chao Yu">
+            </figure>
+            <p>
+              <strong><a href="https://nicsefc.ee.tsinghua.edu.cn/people/ChaoYu">Chao Yu</a></strong><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/wangyu.png" alt="Yu Wang">
+            </figure>
+            <p>
+              <strong><a href="https://web.ee.tsinghua.edu.cn/wangyu/en/index.htm">Yu Wang</a></strong><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/xuhuazhe.jpg" alt="Huazhe Xu">
+            </figure>
+            <p>
+              <strong><a href="http://hxu.rocks">Huazhe Xu</a></strong><br>
+              Tsinghua University & PokeBot
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/gaoshenyuan.jpg" alt="Shenyuan Gao">
+            </figure>
+            <p>
+              <strong><a href="https://github.com/Little-Podi">Shenyuan Gao</a></strong><br>
+              HKUST
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/gaofeng.jpg" alt="Feng Gao">
+            </figure>
+            <p>
+              <strong>Feng Gao</strong><br>
+              [Affiliation to be confirmed]
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/xumengdi.jpg" alt="Mengdi Xu">
+            </figure>
+            <p>
+              <strong><a href="https://www.mengdixu.me/">Mengdi Xu</a></strong><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/liuyunhui.png" alt="Yunhui Liu">
+            </figure>
+            <p>
+              <strong><a href="https://www4.mae.cuhk.edu.hk/peoples/liu-yun-hui/">Yunhui Liu</a></strong><br>
+              The Chinese University of Hong Kong
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/lizhongyu.jpg" alt="Zhongyu Li">
+            </figure>
+            <p>
+              <strong><a href="https://zyliatzju.github.io/">Zhongyu Li</a></strong><br>
+              The Chinese University of Hong Kong
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/Koushil-Sreenath.jpg" alt="Koushil Sreenath">
+            </figure>
+            <p>
+              <strong><a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a></strong><br>
+              UC Berkeley
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Keynote Speakers</h2>
+        <div class="columns is-multiline is-centered">
+          
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/joel_jang.jpg" alt="Joel Jang">
+            </figure>
+            <p>
+              <strong>Joel Jang</strong><br>
+              Senior Research Scientist<br>
+              Nvidia GEAR Lab
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/sophia_shao.jpg" alt="Sophia Shao">
+            </figure>
+            <p>
+              <strong>Sophia Shao</strong><br>
+              Associate Professor<br>
+              University of California, Berkeley
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Tentative Schedule</h2>
+        
+        <div class="content has-text-left">
+          <table class="table is-striped is-hoverable is-fullwidth">
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Talk</th>
+                <th>Comments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8:30–...</td>
+                <td><strong>Speaker name:</strong> Title of Talk 1</td>
+                <td>Morning Sessions should not start before 8:30 AM</td>
+              </tr>
+              <tr>
+                <td>10:30–11:00</td>
+                <td><strong>Morning coffee break</strong></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>12:30</td>
+                <td><strong>End of Morning Sessions</strong></td>
+                <td>Morning sessions should end before lunch</td>
+              </tr>
+              
+              <tr>
+                <td>13:30-...</td>
+                <td><strong>Speaker name:</strong> Title of Talk 1</td>
+                <td>Afternoon sessions should not start before 1:30 PM</td>
+              </tr>
+              <tr>
+                <td>15:30–16:00</td>
+                <td><strong>Afternoon coffee break</strong></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>17:30</td>
+                <td><strong>End of Afternoon Sessions</strong></td>
+                <td>Afternoon sessions should end by 5:30 PM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+    </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>
+            This website template is borrowed from <a
+              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
