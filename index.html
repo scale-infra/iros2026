@@ -117,6 +117,17 @@
     .navbar-item:hover {
       color: #2b6cb0 !important;
     }
+    
+    /* 增加列表样式间距优化 */
+    .content ul {
+      margin-top: 0.5em;
+    }
+    .content h4.title {
+      color: #2d3748;
+      border-left: 4px solid #3182ce;
+      padding-left: 10px;
+      margin-top: 1.5rem;
+    }
   </style>
 </head>
 <body>
@@ -132,7 +143,7 @@
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="#introduction">Introduction</a>
-      <a class="navbar-item" href="#topic">Topic</a>
+      <a class="navbar-item" href="#topic">Topics</a>
       <a class="navbar-item" href="#submission">Submission</a>
       <a class="navbar-item" href="#speakers">Speakers</a>
       <a class="navbar-item" href="#schedule">Schedule</a>
@@ -185,13 +196,51 @@
 
 <section class="section bg-light-gray" id="topic">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
+    <div class="columns is-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3 section-title">Topic</h2>
-        <div class="content has-text-justified">
+        <div class="has-text-centered">
+          <h2 class="title is-3 section-title">Key Topics & Discussion Pillars</h2>
+        </div>
+        <div class="content has-text-left">
           <p>
-            Coming soon...
+            To ensure technical depth and structured dialogue, the workshop is organized around four interconnected pillars[cite: 41]:
           </p>
+          
+          <h4 class="title is-5">1. Data Scaling [cite: 42]</h4>
+          <ul>
+            <li>Scaling real-world robot interaction data collection [cite: 43]</li>
+            <li>Simulation data generation and orchestration [cite: 44]</li>
+            <li>Human-in-the-loop demonstrations and teleoperation [cite: 45]</li>
+            <li>Synthetic multimodal data pipelines [cite: 46]</li>
+            <li>Sim–real hybrid dataset construction [cite: 47]</li>
+          </ul>
+
+          <h4 class="title is-5">2. Training [cite: 48]</h4>
+          <ul>
+            <li>Supervised fine-tuning and imitation learning [cite: 49]</li>
+            <li>Offline and online reinforcement learning [cite: 50]</li>
+            <li>Preference learning and feedback modeling [cite: 51]</li>
+            <li>Continuous post-training workflows [cite: 52]</li>
+            <li>Distributed experimentation and rollout systems [cite: 53]</li>
+          </ul>
+
+          <h4 class="title is-5">3. Evaluation [cite: 54]</h4>
+          <ul>
+            <li>Benchmarking VLA capabilities and generalization [cite: 55]</li>
+            <li>Algorithm comparison protocols [cite: 56]</li>
+            <li>Real-robot evaluation methodologies [cite: 57]</li>
+            <li>Safety and robustness assessment [cite: 58]</li>
+            <li>Long-horizon and open-world task evaluation [cite: 59]</li>
+          </ul>
+
+          <h4 class="title is-5">4. Deployment Infrastructure [cite: 60]</h4>
+          <ul>
+            <li>Real-robot execution systems [cite: 61]</li>
+            <li>Safety monitoring and runtime diagnostics [cite: 62]</li>
+            <li>Hardware–software integration pipelines [cite: 63]</li>
+            <li>Continuous deployment and data feedback loops [cite: 64]</li>
+          </ul>
+
         </div>
       </div>
     </div>
