@@ -40,21 +40,82 @@
   <script src="./static/js/index.js"></script>
   
   <style>
-    /* Helper class to center figures since we cannot modify external CSS */
+    /* 开启平滑滚动，让点击导航栏后的跳转更加自然 */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Helper class to center figures */
     .is-centered-figure {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px;
     }
 
-    /* 新增样式：强制所有头像裁剪为完美的圆形。
-       通过 object-fit: cover 确保图片填满 128x128 的容器而不变形（多余部分会被裁剪），
-       结合已有的 is-rounded 类，最终呈现完美的圆形。
-    */
+    /* 强制所有头像裁剪为完美的圆形 */
     .image.is-128x128 img {
       object-fit: cover;
       height: 100%;
       width: 100%;
+    }
+
+    /* ====== 新增美化样式 ====== */
+    /* 浅灰色背景，用于板块交替 */
+    .bg-light-gray {
+      background-color: #f8f9fa; 
+    }
+
+    /* --- 新增：深色横幅背景设计 --- */
+    .hero-dark {
+      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      padding: 3rem 0; /* 增加上下留白，显得更大气 */
+    }
+
+    .hero-dark .hero-title {
+      color: #ffffff !important;
+      font-weight: 800 !important;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 增加文字阴影，使其更立体 */
+    }
+
+    .hero-dark .publication-authors span {
+      color: #93c5fd !important; /* 浅蓝灰色，与深蓝背景相得益彰 */
+      font-weight: 600;
+      letter-spacing: 1px; /* 字间距稍微拉开一点更高级 */
+    }
+    /* ----------------------------- */
+
+    /* 板块标题：学术蓝 + 底部下划线 */
+    .section-title {
+      color: #1a365d !important;
+      font-weight: 700;
+      border-bottom: 3px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 2rem !important;
+      display: inline-block;
+    }
+
+    /* 人名颜色高亮 */
+    .name-text {
+      color: #2b6cb0 !important; 
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: color 0.2s ease-in-out;
+    }
+
+    /* 超链接人名悬停效果 */
+    a.name-text:hover {
+      color: #1e4a80 !important;
+      text-decoration: underline;
+    }
+
+    /* 导航栏文字加粗及悬停颜色 */
+    .navbar-item {
+      font-weight: 600;
+      color: #4a5568;
+    }
+    .navbar-item:hover {
+      color: #2b6cb0 !important;
     }
   </style>
 </head>
@@ -70,23 +131,24 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="#">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
+      <a class="navbar-item" href="#introduction">Introduction</a>
+      <a class="navbar-item" href="#topic">Topic</a>
+      <a class="navbar-item" href="#submission">Submission</a>
+      <a class="navbar-item" href="#speakers">Speakers</a>
+      <a class="navbar-item" href="#schedule">Schedule</a>
+      <a class="navbar-item" href="#organizers">Organizers</a>
     </div>
   </div>
 </nav>
 
 
-<section class="hero">
+<section class="hero hero-dark" id="home">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-2 publication-title">Building Scalable Infrastructure for Vision–Language–Action Robot Learning:<br>From Data Scaling to Real-World Deployment</h1>
-          <div class="is-size-4 publication-authors">
+          <h1 class="title is-2 publication-title hero-title">Building Scalable Infrastructure for Vision–Language–Action Robot Learning:<br>From Data Scaling to Real-World Deployment</h1>
+          <div class="is-size-4 publication-authors mt-4">
             <span class="author-block">IROS 2026 Workshop</span>
           </div>
         </div>
@@ -96,11 +158,11 @@
 </section>
 
 
-<section class="section">
+<section class="section" id="introduction">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3 section-title">Introduction</h2>
         <div class="content has-text-justified">
           <p>
             Recent advances in Vision–Language–Action (VLA) models and embodied foundation models have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
@@ -117,127 +179,55 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </section>
 
 
-<section class="section">
+<section class="section bg-light-gray" id="topic">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">Organizers</h2>
-        <div class="columns is-multiline is-centered">
-          
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/chao_yu.jpg" alt="Chao Yu">
-            </figure>
-            <p>
-              <strong><a href="https://nicsefc.ee.tsinghua.edu.cn/people/ChaoYu">Chao Yu</a></strong><br>
-              Tsinghua University
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/yu_wang.jpg" alt="Yu Wang">
-            </figure>
-            <p>
-              <strong><a href="https://web.ee.tsinghua.edu.cn/wangyu/en/index.htm">Yu Wang</a></strong><br>
-              Tsinghua University
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/huazhe_xu.jpg" alt="Huazhe Xu">
-            </figure>
-            <p>
-              <strong><a href="http://hxu.rocks">Huazhe Xu</a></strong><br>
-              Tsinghua University & PokeBot
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/shenyuan_gao.jpg" alt="Shenyuan Gao">
-            </figure>
-            <p>
-              <strong><a href="https://github.com/Little-Podi">Shenyuan Gao</a></strong><br>
-              HKUST
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/feng_gao.jpg" alt="Feng Gao">
-            </figure>
-            <p>
-              <strong>Feng Gao</strong><br>
-              [Affiliation to be confirmed]
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/mengdi_xu.jpg" alt="Mengdi Xu">
-            </figure>
-            <p>
-              <strong><a href="https://www.mengdixu.me/">Mengdi Xu</a></strong><br>
-              Tsinghua University
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/yunhui_liu.jpg" alt="Yunhui Liu">
-            </figure>
-            <p>
-              <strong><a href="https://www4.mae.cuhk.edu.hk/peoples/liu-yun-hui/">Yunhui Liu</a></strong><br>
-              The Chinese University of Hong Kong
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/zhongyu_li.jpg" alt="Zhongyu Li">
-            </figure>
-            <p>
-              <strong><a href="https://zyliatzju.github.io/">Zhongyu Li</a></strong><br>
-              The Chinese University of Hong Kong
-            </p>
-          </div>
-
-          <div class="column is-one-third has-text-centered">
-            <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/koushil_sreenath.jpg" alt="Koushil Sreenath">
-            </figure>
-            <p>
-              <strong><a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a></strong><br>
-              UC Berkeley
-            </p>
-          </div>
-
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Topic</h2>
+        <div class="content has-text-justified">
+          <p>
+            Coming soon...
+          </p>
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </section>
 
 
-<section class="section">
+<section class="section" id="submission">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Submission</h2>
+        <div class="content has-text-justified">
+          <p>
+            Coming soon...
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section bg-light-gray" id="speakers">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Keynote Speakers</h2>
+        <h2 class="title is-3 section-title">Keynote Speakers</h2>
         <div class="columns is-multiline is-centered">
           
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/joel_jang.jpg" alt="Joel Jang">
+              <img class="is-rounded" src="./static/images/joeljang.jpg" alt="Joel Jang">
             </figure>
             <p>
-              <strong>Joel Jang</strong><br>
+              <span class="name-text">Joel Jang</span><br>
               Senior Research Scientist<br>
               Nvidia GEAR Lab
             </p>
@@ -245,10 +235,10 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/sophia_shao.jpg" alt="Sophia Shao">
+              <img class="is-rounded" src="./static/images/yakun-sophia-shao.jpg" alt="Sophia Shao">
             </figure>
             <p>
-              <strong>Sophia Shao</strong><br>
+              <span class="name-text">Sophia Shao</span><br>
               Associate Professor<br>
               University of California, Berkeley
             </p>
@@ -257,18 +247,18 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </section>
 
 
-<section class="section">
+<section class="section" id="schedule">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3">Tentative Schedule</h2>
+        <h2 class="title is-3 section-title">Tentative Schedule</h2>
         
         <div class="content has-text-left">
-          <table class="table is-striped is-hoverable is-fullwidth">
+          <table class="table is-striped is-hoverable is-fullwidth" style="background-color: transparent;">
             <thead>
               <tr>
                 <th>Time</th>
@@ -279,7 +269,7 @@
             <tbody>
               <tr>
                 <td>8:30–...</td>
-                <td><strong>Speaker name:</strong> Title of Talk 1</td>
+                <td><span class="name-text">Speaker name:</span> Title of Talk 1</td>
                 <td>Morning Sessions should not start before 8:30 AM</td>
               </tr>
               <tr>
@@ -295,7 +285,7 @@
               
               <tr>
                 <td>13:30-...</td>
-                <td><strong>Speaker name:</strong> Title of Talk 1</td>
+                <td><span class="name-text">Speaker name:</span> Title of Talk 1</td>
                 <td>Afternoon sessions should not start before 1:30 PM</td>
               </tr>
               <tr>
@@ -314,7 +304,111 @@
 
       </div>
     </div>
+  </div>
+</section>
+
+
+<section class="section bg-light-gray" id="organizers">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full">
+        <h2 class="title is-3 section-title">Organizers</h2>
+        <div class="columns is-multiline is-centered">
+          
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/yuchao.jpg" alt="Chao Yu">
+            </figure>
+            <p>
+              <a href="https://nicsefc.ee.tsinghua.edu.cn/people/ChaoYu" class="name-text">Chao Yu</a><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/wangyu.png" alt="Yu Wang">
+            </figure>
+            <p>
+              <a href="https://web.ee.tsinghua.edu.cn/wangyu/en/index.htm" class="name-text">Yu Wang</a><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/xuhuazhe.jpg" alt="Huazhe Xu">
+            </figure>
+            <p>
+              <a href="http://hxu.rocks" class="name-text">Huazhe Xu</a><br>
+              Tsinghua University & PokeBot
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/gaoshenyuan.jpg" alt="Shenyuan Gao">
+            </figure>
+            <p>
+              <a href="https://github.com/Little-Podi" class="name-text">Shenyuan Gao</a><br>
+              HKUST
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/gaofeng.jpg" alt="Feng Gao">
+            </figure>
+            <p>
+              <span class="name-text">Feng Gao</span><br>
+              [Affiliation to be confirmed]
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/xumengdi.jpg" alt="Mengdi Xu">
+            </figure>
+            <p>
+              <a href="https://www.mengdixu.me/" class="name-text">Mengdi Xu</a><br>
+              Tsinghua University
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/liuyunhui.png" alt="Yunhui Liu">
+            </figure>
+            <p>
+              <a href="https://www4.mae.cuhk.edu.hk/peoples/liu-yun-hui/" class="name-text">Yunhui Liu</a><br>
+              The Chinese University of Hong Kong
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/lizhongyu.jpg" alt="Zhongyu Li">
+            </figure>
+            <p>
+              <a href="https://zyliatzju.github.io/" class="name-text">Zhongyu Li</a><br>
+              The Chinese University of Hong Kong
+            </p>
+          </div>
+
+          <div class="column is-one-third has-text-centered">
+            <figure class="image is-128x128 is-centered-figure">
+              <img class="is-rounded" src="./static/images/Koushil-Sreenath.jpg" alt="Koushil Sreenath">
+            </figure>
+            <p>
+              <a href="https://me.berkeley.edu/people/koushil-sreenath/" class="name-text">Koushil Sreenath</a><br>
+              UC Berkeley
+            </p>
+          </div>
+
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <footer class="footer">
