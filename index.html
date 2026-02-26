@@ -11,61 +11,41 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  
   <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  
   <style>
-    /* 开启平滑滚动，让点击导航栏后的跳转更加自然 */
-    html {
-      scroll-behavior: smooth;
-    }
+    /* 开启平滑滚动 */
+    html { scroll-behavior: smooth; }
 
-    /* Helper class to center figures */
+    /* 图片居中辅助类 */
     .is-centered-figure {
       margin-left: auto;
       margin-right: auto;
       margin-bottom: 15px;
     }
 
-    /* 强制所有头像裁剪为完美的圆形 */
+    /* 强制头像裁剪为完美圆形 */
     .image.is-128x128 img {
       object-fit: cover;
       height: 100%;
       width: 100%;
     }
 
-    /* ====== 新增美化样式 ====== */
-    /* 浅灰色背景，用于板块交替 */
-    .bg-light-gray {
-      background-color: #f8f9fa; 
-    }
+    /* 浅灰背景块 */
+    .bg-light-gray { background-color: #f8f9fa; }
 
-    /* --- 新增：深色横幅背景设计 --- */
+    /* 深色横幅背景 */
     .hero-dark {
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
       padding: 3rem 0;
@@ -82,9 +62,8 @@
       font-weight: 600;
       letter-spacing: 1px;
     }
-    /* ----------------------------- */
 
-    /* 板块标题：学术蓝 + 底部下划线 */
+    /* 板块标题 */
     .section-title {
       color: #1a365d !important;
       font-weight: 700;
@@ -94,7 +73,7 @@
       display: inline-block;
     }
 
-    /* 人名颜色高亮 */
+    /* 人名颜色及交互 */
     .name-text {
       color: #2b6cb0 !important; 
       font-weight: 700;
@@ -102,31 +81,33 @@
       text-decoration: none;
       transition: color 0.2s ease-in-out;
     }
-
-    /* 超链接人名悬停效果 */
     a.name-text:hover {
       color: #1e4a80 !important;
       text-decoration: underline;
     }
 
-    /* 导航栏文字加粗及悬停颜色 */
+    /* 导航栏吸顶效果 */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.95) !important; 
+      backdrop-filter: blur(5px); 
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    }
     .navbar-item {
       font-weight: 600;
       color: #4a5568;
     }
-    .navbar-item:hover {
-      color: #2b6cb0 !important;
-    }
+    .navbar-item:hover { color: #2b6cb0 !important; }
     
-    /* === 专门针对 Topic 板块的样式优化 === */
-    #topic .content p {
-      margin-bottom: 1.5rem;
-    }
+    /* Topic 板块优化 */
+    #topic .content p { margin-bottom: 1.5rem; }
     #topic .content h4.title {
       color: #2d3748;
       border-left: 4px solid #3182ce;
       padding-left: 10px;
-      margin-top: 0.5rem; /* 由于采用了双列网格，上边距适当减小 */
+      margin-top: 0.5rem; 
       margin-bottom: 0.8rem; 
     }
     #topic .content ul {
@@ -138,34 +119,30 @@
       line-height: 1.4; 
       margin-bottom: 0.4rem; 
     }
-    /* 为双列网格增加一点上下间距 */
-    .topic-grid {
-      margin-top: 1rem;
-    }
+    .topic-grid { margin-top: 1rem; }
   </style>
 </head>
 <body>
 
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
     </a>
   </div>
-  <div class="navbar-menu">
+  <div class="navbar-menu" id="navbarMenu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="#introduction">Introduction</a>
       <a class="navbar-item" href="#topic">Topics</a>
-      <a class="navbar-item" href="#submission">Submission</a>
+      <a class="navbar-item" href="#call-for-papers">Call for Papers</a>
       <a class="navbar-item" href="#speakers">Speakers</a>
       <a class="navbar-item" href="#schedule">Schedule</a>
       <a class="navbar-item" href="#organizers">Organizers</a>
     </div>
   </div>
 </nav>
-
 
 <section class="hero hero-dark" id="home">
   <div class="hero-body">
@@ -181,7 +158,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section" id="introduction">
   <div class="container is-max-desktop">
@@ -206,7 +182,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section bg-light-gray" id="topic">
   <div class="container is-max-desktop">
@@ -272,12 +247,11 @@
   </div>
 </section>
 
-
-<section class="section" id="submission">
+<section class="section" id="call-for-papers">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full">
-        <h2 class="title is-3 section-title">Submission</h2>
+        <h2 class="title is-3 section-title">Call for Papers</h2>
         <div class="content has-text-justified">
           <p>
             Coming soon...
@@ -287,7 +261,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section bg-light-gray" id="speakers">
   <div class="container is-max-desktop">
@@ -323,7 +296,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section" id="schedule">
   <div class="container is-max-desktop">
@@ -380,7 +352,6 @@
     </div>
   </div>
 </section>
-
 
 <section class="section bg-light-gray" id="organizers">
   <div class="container is-max-desktop">
@@ -490,9 +461,8 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered">
-          <p>
-            This website template is borrowed from <a
-              href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.
+          <p style="color: #4a5568;">
+            &copy; IROS 2026 Scale-infra workshop. All rights reserved.
           </p>
         </div>
       </div>
@@ -500,5 +470,20 @@
   </div>
 </footer>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if ($navbarBurgers.length > 0) {
+      $navbarBurgers.forEach( el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
 </body>
 </html>
