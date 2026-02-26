@@ -118,24 +118,29 @@
       color: #2b6cb0 !important;
     }
     
-    /* === 专门针对 Topic 板块缩小行间距 === */
+    /* === 专门针对 Topic 板块的样式优化 === */
     #topic .content p {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
     #topic .content h4.title {
       color: #2d3748;
       border-left: 4px solid #3182ce;
       padding-left: 10px;
-      margin-top: 1.2rem; /* 减小上边距 */
-      margin-bottom: 0.5rem; /* 减小下边距 */
+      margin-top: 0.5rem; /* 由于采用了双列网格，上边距适当减小 */
+      margin-bottom: 0.8rem; 
     }
     #topic .content ul {
-      margin-top: 0.2rem;
+      margin-top: 0;
       margin-bottom: 1rem;
+      padding-left: 1.2rem;
     }
     #topic .content li {
-      line-height: 1.4; /* 缩小行高 */
-      margin-bottom: 0.2rem; /* 缩小列表项之间的间距 */
+      line-height: 1.4; 
+      margin-bottom: 0.4rem; 
+    }
+    /* 为双列网格增加一点上下间距 */
+    .topic-grid {
+      margin-top: 1rem;
     }
   </style>
 </head>
@@ -181,7 +186,7 @@
 <section class="section" id="introduction">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <h2 class="title is-3 section-title">Introduction</h2>
         <div class="content has-text-justified">
           <p>
@@ -206,51 +211,62 @@
 <section class="section bg-light-gray" id="topic">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <div class="has-text-centered">
           <h2 class="title is-3 section-title">Key Topics & Discussion Pillars</h2>
         </div>
         <div class="content has-text-left">
-          <p>
-            To ensure technical depth and structured dialogue, the workshop is organized around four interconnected pillars:
+          <p class="has-text-centered">
+            This workshop focuses on four interconnected pillars:
           </p>
           
-          <h4 class="title is-5">1. Data Scaling</h4>
-          <ul>
-            <li>Scaling real-world robot interaction data collection</li>
-            <li>Simulation data generation and orchestration</li>
-            <li>Human-in-the-loop demonstrations and teleoperation</li>
-            <li>Synthetic multimodal data pipelines</li>
-            <li>Sim–real hybrid dataset construction</li>
-          </ul>
+          <div class="columns is-multiline topic-grid">
+            
+            <div class="column is-half">
+              <h4 class="title is-5">1. Data Scaling</h4>
+              <ul>
+                <li>Scaling real-world robot interaction data collection</li>
+                <li>Simulation data generation and orchestration</li>
+                <li>Human-in-the-loop demonstrations and teleoperation</li>
+                <li>Synthetic multimodal data pipelines</li>
+                <li>Sim–real hybrid dataset construction</li>
+              </ul>
+            </div>
 
-          <h4 class="title is-5">2. Training</h4>
-          <ul>
-            <li>Supervised fine-tuning and imitation learning</li>
-            <li>Offline and online reinforcement learning</li>
-            <li>Preference learning and feedback modeling</li>
-            <li>Continuous post-training workflows</li>
-            <li>Distributed experimentation and rollout systems</li>
-          </ul>
+            <div class="column is-half">
+              <h4 class="title is-5">2. Training</h4>
+              <ul>
+                <li>Supervised fine-tuning and imitation learning</li>
+                <li>Offline and online reinforcement learning</li>
+                <li>Preference learning and feedback modeling</li>
+                <li>Continuous post-training workflows</li>
+                <li>Distributed experimentation and rollout systems</li>
+              </ul>
+            </div>
 
-          <h4 class="title is-5">3. Evaluation</h4>
-          <ul>
-            <li>Benchmarking VLA capabilities and generalization</li>
-            <li>Algorithm comparison protocols</li>
-            <li>Real-robot evaluation methodologies</li>
-            <li>Safety and robustness assessment</li>
-            <li>Long-horizon and open-world task evaluation</li>
-          </ul>
+            <div class="column is-half">
+              <h4 class="title is-5">3. Evaluation</h4>
+              <ul>
+                <li>Benchmarking VLA capabilities and generalization</li>
+                <li>Algorithm comparison protocols</li>
+                <li>Real-robot evaluation methodologies</li>
+                <li>Safety and robustness assessment</li>
+                <li>Long-horizon and open-world task evaluation</li>
+              </ul>
+            </div>
 
-          <h4 class="title is-5">4. Deployment Infrastructure</h4>
-          <ul>
-            <li>Real-robot execution systems</li>
-            <li>Safety monitoring and runtime diagnostics</li>
-            <li>Hardware–software integration pipelines</li>
-            <li>Continuous deployment and data feedback loops</li>
-          </ul>
+            <div class="column is-half">
+              <h4 class="title is-5">4. Deployment Infrastructure</h4>
+              <ul>
+                <li>Real-robot execution systems</li>
+                <li>Safety monitoring and runtime diagnostics</li>
+                <li>Hardware–software integration pipelines</li>
+                <li>Continuous deployment and data feedback loops</li>
+              </ul>
+            </div>
 
-        </div>
+          </div>
+          </div>
       </div>
     </div>
   </div>
@@ -260,7 +276,7 @@
 <section class="section" id="submission">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full">
         <h2 class="title is-3 section-title">Submission</h2>
         <div class="content has-text-justified">
           <p>
@@ -418,8 +434,8 @@
               <img class="is-rounded" src="./static/images/gaofeng.jpg" alt="Feng Gao">
             </figure>
             <p>
-              <span class="name-text">Feng Gao</span><br>
-              [Affiliation to be confirmed]
+              <a href="https://scholar.google.com/citations?user=wzcIdLAAAAAJ&hl=zh-CN&oi=sra" class="name-text">Feng Gao</a><br>
+              Tsinghua University & Striding AI
             </p>
           </div>
 
