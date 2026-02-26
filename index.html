@@ -46,6 +46,16 @@
       margin-right: auto;
       margin-bottom: 15px;
     }
+
+    /* 新增样式：强制所有头像裁剪为完美的圆形。
+       通过 object-fit: cover 确保图片填满 128x128 的容器而不变形（多余部分会被裁剪），
+       结合已有的 is-rounded 类，最终呈现完美的圆形。
+    */
+    .image.is-128x128 img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +103,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advances in Vision-Language-Action (VLA) models and embodied foundation models have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
+            Recent advances in Vision–Language–Action (VLA) models and embodied foundation models have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
           </p>
           <p>
             This workshop focuses on building the end-to-end infrastructure required for scalable robot learning, covering the full lifecycle from data scaling to deployment. The program combines invited keynote talks, spotlight presentations, interactive posters, and a panel discussion to examine four tightly connected stages of VLA development: data scaling, training, evaluation, and deployment infrastructure.
@@ -120,7 +130,7 @@
           
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/yuchao.jpg" alt="Chao Yu">
+              <img class="is-rounded" src="./static/images/chao_yu.jpg" alt="Chao Yu">
             </figure>
             <p>
               <strong><a href="https://nicsefc.ee.tsinghua.edu.cn/people/ChaoYu">Chao Yu</a></strong><br>
@@ -130,7 +140,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/wangyu.png" alt="Yu Wang">
+              <img class="is-rounded" src="./static/images/yu_wang.jpg" alt="Yu Wang">
             </figure>
             <p>
               <strong><a href="https://web.ee.tsinghua.edu.cn/wangyu/en/index.htm">Yu Wang</a></strong><br>
@@ -140,7 +150,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/xuhuazhe.jpg" alt="Huazhe Xu">
+              <img class="is-rounded" src="./static/images/huazhe_xu.jpg" alt="Huazhe Xu">
             </figure>
             <p>
               <strong><a href="http://hxu.rocks">Huazhe Xu</a></strong><br>
@@ -150,7 +160,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/gaoshenyuan.jpg" alt="Shenyuan Gao">
+              <img class="is-rounded" src="./static/images/shenyuan_gao.jpg" alt="Shenyuan Gao">
             </figure>
             <p>
               <strong><a href="https://github.com/Little-Podi">Shenyuan Gao</a></strong><br>
@@ -160,7 +170,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/gaofeng.jpg" alt="Feng Gao">
+              <img class="is-rounded" src="./static/images/feng_gao.jpg" alt="Feng Gao">
             </figure>
             <p>
               <strong>Feng Gao</strong><br>
@@ -170,7 +180,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/xumengdi.jpg" alt="Mengdi Xu">
+              <img class="is-rounded" src="./static/images/mengdi_xu.jpg" alt="Mengdi Xu">
             </figure>
             <p>
               <strong><a href="https://www.mengdixu.me/">Mengdi Xu</a></strong><br>
@@ -180,7 +190,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/liuyunhui.png" alt="Yunhui Liu">
+              <img class="is-rounded" src="./static/images/yunhui_liu.jpg" alt="Yunhui Liu">
             </figure>
             <p>
               <strong><a href="https://www4.mae.cuhk.edu.hk/peoples/liu-yun-hui/">Yunhui Liu</a></strong><br>
@@ -190,7 +200,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/lizhongyu.jpg" alt="Zhongyu Li">
+              <img class="is-rounded" src="./static/images/zhongyu_li.jpg" alt="Zhongyu Li">
             </figure>
             <p>
               <strong><a href="https://zyliatzju.github.io/">Zhongyu Li</a></strong><br>
@@ -200,7 +210,7 @@
 
           <div class="column is-one-third has-text-centered">
             <figure class="image is-128x128 is-centered-figure">
-              <img class="is-rounded" src="./static/images/Koushil-Sreenath.jpg" alt="Koushil Sreenath">
+              <img class="is-rounded" src="./static/images/koushil_sreenath.jpg" alt="Koushil Sreenath">
             </figure>
             <p>
               <strong><a href="https://me.berkeley.edu/people/koushil-sreenath/">Koushil Sreenath</a></strong><br>
