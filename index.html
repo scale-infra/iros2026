@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Building Scalable Infrastructure for Robot Learning: From Data Scaling to Real-World Deployment">
-  <meta name="keywords" content="IROS 2026, Robot Learning, Workshop">
+        content="IROS 2026 Workshop on Building Scalable Infrastructure for Robot Learning: From Data Scaling to Real-World Deployment">
+  <meta name="keywords" content="IROS 2026, Robot Learning, Embodied AI, VLA, Infrastructure, Workshop">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Building Scalable Infrastructure for Robot Learning: From Data Scaling to Real-World Deployment</title>
 
@@ -47,7 +47,7 @@
 
     /* 深色横幅背景 */
     .hero-dark {
-      background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+      background: linear-gradient(135deg, #0f172a 0%, #1f4f78 58%, #1b6b68 100%);
       padding: 3rem 0;
     }
 
@@ -120,6 +120,33 @@
       margin-bottom: 0.4rem; 
     }
     .topic-grid { margin-top: 1rem; }
+
+    .info-card {
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1.25rem;
+      height: 100%;
+      background: #ffffff;
+    }
+
+    .info-card .label {
+      color: #4a5568;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .info-card .value {
+      color: #1a365d;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 0.25rem;
+    }
+
+    .date-table td:first-child {
+      font-weight: 700;
+      color: #1a365d;
+    }
   </style>
 </head>
 <body>
@@ -137,6 +164,7 @@
       <a class="navbar-item" href="#introduction">Introduction</a>
       <a class="navbar-item" href="#topic">Topics</a>
       <a class="navbar-item" href="#call-for-papers">Call for Papers</a>
+      <a class="navbar-item" href="#dates">Dates</a>
       <a class="navbar-item" href="#speakers">Speakers</a>
       <a class="navbar-item" href="#schedule">Schedule</a>
       <a class="navbar-item" href="#organizers">Organizers</a>
@@ -153,6 +181,9 @@
           <div class="is-size-4 publication-authors mt-4">
             <span class="author-block">IROS 2026 Workshop</span>
           </div>
+          <div class="is-size-5 publication-authors mt-3">
+            <span class="author-block">Pittsburgh, PA, USA &nbsp;|&nbsp; September 27 or October 1, 2026 (TBD)</span>
+          </div>
         </div>
       </div>
     </div>
@@ -166,16 +197,16 @@
         <h2 class="title is-3 section-title">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advances in Vision–Language–Action (VLA) models and embodied foundation models have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
+            Recent advances in robot learning, including Vision-Language-Action (VLA) models and embodied foundation models, have demonstrated promising progress toward general-purpose robots. However, scaling robot learning beyond laboratory demonstrations is increasingly limited by system-level challenges rather than model architectures alone. Large-scale data acquisition, post-training methodologies, reliable evaluation, and real-robot deployment remain fragmented across different research efforts.
           </p>
           <p>
-            This workshop focuses on building the end-to-end infrastructure required for scalable robot learning, covering the full lifecycle from data scaling to deployment. The program combines invited keynote talks, spotlight presentations, interactive posters, and a panel discussion to examine four tightly connected stages of VLA development: data scaling, training, evaluation, and deployment infrastructure.
+            This workshop focuses on building the end-to-end infrastructure required for scalable robot learning, covering the full lifecycle from data scaling to deployment. The program combines invited keynote talks, selected paper presentations, interactive posters, and a panel discussion to examine four tightly connected stages of modern robot learning development: data scaling, training and post-training, evaluation, and deployment infrastructure.
           </p>
           <p>
-            Discussions will address large-scale real and simulated data generation, post-training paradigms such as supervised fine-tuning and reinforcement learning, standardized evaluation protocols for embodied intelligence, and infrastructure supporting real-world robot execution and fleet learning. This multi-format structure is designed to connect algorithmic innovation with engineering practice and to encourage cross-disciplinary exchange between robotics, machine learning systems, and computer vision communities.
+            Discussions will address large-scale real and simulated data generation, post-training paradigms such as supervised fine-tuning and reinforcement learning, standardized evaluation protocols for embodied intelligence, and infrastructure supporting real-world robot execution and fleet learning. This multi-format structure is designed to connect algorithmic innovation with engineering practice and to encourage cross-disciplinary exchange between robotics, machine learning systems, computer vision, and reinforcement learning communities.
           </p>
           <p>
-            We expect the workshop to (i) clarify shared system challenges in scaling VLA post-training, (ii) promote reproducible evaluation and deployment practices, and (iii) catalyze reusable infrastructure design principles that enable continuous robot learning in real-world environments.
+            We expect the workshop to (i) clarify shared system challenges in scaling robot learning, (ii) promote reproducible evaluation and deployment practices, and (iii) catalyze reusable infrastructure design principles that enable continuous robot learning in real-world environments.
           </p>
         </div>
       </div>
@@ -188,7 +219,7 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="has-text-centered">
-          <h2 class="title is-3 section-title">Key Topics & Discussion Pillars</h2>
+          <h2 class="title is-3 section-title">Key Topics &amp; Discussion Pillars</h2>
         </div>
         <div class="content has-text-left">
           <p class="has-text-centered" style="margin-bottom: 2rem;">
@@ -196,8 +227,8 @@
           </p>
           <ul>
             <li><strong>Data Scaling:</strong> Exploring scalable strategies for acquiring, generating, and orchestrating multimodal data across real-world interactions and simulations.</li>
-            <li><strong>Training:</strong> Examining robust post-training paradigms, including imitation learning and reinforcement learning, to effectively adapt VLA models for complex tasks.</li>
-            <li><strong>Evaluation:</strong> Developing standardized benchmarking protocols and methodologies to assess VLA capabilities, generalization, and safety in embodied intelligence.</li>
+            <li><strong>Training and Post-Training:</strong> Examining supervised fine-tuning, imitation learning, reinforcement learning, preference learning, and scalable training workflows for embodied agents.</li>
+            <li><strong>Evaluation:</strong> Developing standardized benchmarking protocols and methodologies to assess generalization, long-horizon reasoning, safety, robustness, and data efficiency.</li>
             <li><strong>Deployment Infrastructure:</strong> Building reliable software-hardware integration pipelines and continuous feedback loops to support real-world robot execution and fleet learning.</li>
           </ul>
         </div>
@@ -235,14 +266,50 @@
             Submission Details
           </h4>
           <p>
-            Coming soon...
+            Submissions will be managed through OpenReview and reviewed using a double-blind process. We welcome research papers, system and infrastructure reports, benchmark or evaluation papers, work in progress, and negative or failure-case studies that provide practical insight for the community.
           </p>
+          <ul>
+            <li><strong>Submission site:</strong> <a href="https://openreview.net/group?id=IEEE.org/IROS/2026/Workshop/ScaleInfra" target="_blank" rel="noopener noreferrer">OpenReview submission page</a>.</li>
+            <li><strong>Format:</strong> IROS / IEEE two-column conference template.</li>
+            <li><strong>Length:</strong> Extended abstracts of 2-4 pages or full papers of 6-8 pages, excluding references.</li>
+            <li><strong>Anonymity:</strong> Submissions must not include author names, affiliations, acknowledgements, or other information that clearly reveals author identity.</li>
+            <li><strong>Supplementary material:</strong> Optional supplementary material may include anonymized videos, appendices, code packages, dataset samples, or project materials. The maximum OpenReview upload size is 250MB. Larger materials should be shared through anonymized links in the paper or supplementary PDF.</li>
+            <li><strong>Presentation format:</strong> Accepted submissions will be considered for selected paper talks or interactive poster presentations. We plan to select three submissions for oral presentation.</li>
+          </ul>
 
-          <h4 class="title is-5" style="color: #2d3748; border-left: 4px solid #3182ce; padding-left: 10px; margin-top: 2rem; margin-bottom: 0.8rem;">
+          <h4 class="title is-5" id="dates" style="color: #2d3748; border-left: 4px solid #3182ce; padding-left: 10px; margin-top: 2rem; margin-bottom: 0.8rem;">
             Important Dates
           </h4>
+          <table class="table is-striped is-hoverable is-fullwidth date-table">
+            <tbody>
+              <tr>
+                <td>Early-decision submission deadline</td>
+                <td>July 12, 2026</td>
+              </tr>
+              <tr>
+                <td>Early-decision notification</td>
+                <td>August 2, 2026</td>
+              </tr>
+              <tr>
+                <td>Regular submission deadline</td>
+                <td>August 9, 2026</td>
+              </tr>
+              <tr>
+                <td>Regular notification</td>
+                <td>August 30, 2026</td>
+              </tr>
+              <tr>
+                <td>Camera-ready deadline</td>
+                <td>September 13, 2026</td>
+              </tr>
+              <tr>
+                <td>Workshop date</td>
+                <td>September 27 or October 1, 2026 (TBD by IROS)</td>
+              </tr>
+            </tbody>
+          </table>
           <p>
-            Coming soon...
+            Early-decision submissions are intended for authors who need an earlier notification for visa, funding, or travel-planning purposes. All deadlines are 23:59 Anywhere on Earth unless otherwise specified on OpenReview.
           </p>
 
         </div>
@@ -348,18 +415,18 @@
             <tbody>
               <tr>
                 <td>09:00 - 09:10</td>
-                <td><strong>Welcome & Opening Remarks</strong></td>
+                <td><strong>Welcome &amp; Opening Remarks</strong></td>
                 <td>Workshop Organizers</td>
               </tr>
               <tr>
                 <td>09:10 - 09:35</td>
                 <td><strong>Invited Talk 1</strong></td>
-                <td><span class="name-text">Joel Jang</span> (Nvidia)<br><em>Topic: TBD (25 mins)</em></td>
+                <td><span class="name-text">Joel Jang</span> (NVIDIA)<br><em>DreamZero: World Action Models Are Zero-Shot Policies (25 mins)</em></td>
               </tr>
               <tr>
                 <td>09:35 - 10:00</td>
                 <td><strong>Invited Talk 2</strong></td>
-                <td><span class="name-text">Mengdi Xu</span> (Tsinghua University)<br><em>Topic: TBD (25 mins)</em></td>
+                <td><span class="name-text">Mengdi Xu</span> (Tsinghua University)<br><em>Building Adaptable Generalist Robots for Human-Centered Environments (25 mins)</em></td>
               </tr>
               <tr>
                 <td>10:00 - 10:30</td>
@@ -368,8 +435,8 @@
               </tr>
               <tr class="bg-light-gray">
                 <td>10:30 - 11:00</td>
-                <td><strong>Coffee Break & Poster Session</strong></td>
-                <td>Interactive paper discussions & Networking</td>
+                <td><strong>Coffee Break &amp; Poster Session</strong></td>
+                <td>Interactive paper discussions &amp; Networking</td>
               </tr>
               <tr>
                 <td>11:00 - 11:25</td>
@@ -379,20 +446,15 @@
               <tr>
                 <td>11:25 - 11:50</td>
                 <td><strong>Invited Talk 4</strong></td>
-                <td><span class="name-text">Yan Ding</span> (Lumos Robotics)<br><em>Topic: TBD (25 mins)</em></td>
+                <td><span class="name-text">Yan Ding</span> (Lumos Robotics)<br><em>FastUMI: Embodiment-Agnostic Data Infrastructure for Robotics (25 mins)</em></td>
               </tr>
               <tr>
                 <td>11:50 - 12:15</td>
                 <td><strong>Invited Talk 5</strong></td>
-                <td><span class="name-text">Chenfeng Xu</span> (UT Austin)<br><em>Topic: TBD (25 mins)</em></td>
+                <td><span class="name-text">Chenfeng Xu</span> (UT Austin)<br><em>Efficient Machine Learning and AI Systems (25 mins)</em></td>
               </tr>
               <tr>
-                <td>12:15 - 12:45</td>
-                <td><strong>Panel Discussion</strong></td>
-                <td><strong>All Invited Speakers</strong><br><em>Topic: The Future of Scalable Robot Learning</em></td>
-              </tr>
-              <tr>
-                <td>12:45 - 12:55</td>
+                <td>12:15 - 12:25</td>
                 <td><strong>Closing Remarks</strong></td>
                 <td>Workshop Organizers</td>
               </tr>
@@ -438,7 +500,7 @@
             </figure>
             <p>
               <a href="http://hxu.rocks" class="name-text">Huazhe Xu</a><br>
-              Tsinghua University & PokeBot
+              Tsinghua University &amp; PokeBot
             </p>
           </div>
 
@@ -458,7 +520,7 @@
             </figure>
             <p>
               <a href="https://scholar.google.com/citations?user=wzcIdLAAAAAJ&hl=zh-CN&oi=sra" class="name-text">Feng Gao</a><br>
-              Tsinghua University & Striding AI
+              Tsinghua University &amp; Striding AI
             </p>
           </div> -->
 
