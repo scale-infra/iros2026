@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scale-infra.github.io/iros2026/sitemap.xml
